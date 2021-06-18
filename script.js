@@ -1,19 +1,40 @@
-$(document).ready(function(){
-    $('a[href^="#"], *[data-href^="#"]').on('click', function(e){
-        e.preventDefault();
-        var t = 300;
-        var d = $(this).attr('data-href') ? $(this).attr('data-href') : $(this).attr('href');
-        $('html,body').stop().animate({ scrollTop: $(d).offset().top }, t);
-    });
+let offset = 0;
+const sliderLine = document.querySelector('.slider__box');
+
+document.querySelector('.slider__r-button').addEventListener('click', function(){
+    offset = offset + 480;
+    if (offset > 2400) {
+        offset = 0;
+    }
+    sliderLine.style.left = -offset + 'px';
 });
 
-$(function(){
-    $('#simple_slider img:lt(-1)').hide(); //скрываем все изображения, кроме последнего в списке
-    $('a.left_button').click(function(){
-      $('#simple_slider > img:first-child').fadeIn().appendTo('#simple_slider').end().siblings('img').fadeOut();
-    }); //показываем первую картинку, перемещаем в конец списка, скрываем все соседние элементы
-    $('a.right_button').click(function(){
-      $('#simple_slider > img:last-child').fadeOut().prev('img').fadeIn().end().prependTo('#simple_slider');
-    }); //скрываем последнее изображение, показываем предыдущие, переносим в начало
-   });
+document.querySelector('.slider__l-button').addEventListener('click', function () {
+    offset = offset - 480;
+    if (offset < 0) {
+        offset = 2400;
+    }
+    sliderLine.style.left = -offset + 'px';
+});
 
+
+window.addEventListener("resize", AutoScale);
+
+AutoScale();
+function AutoScale()
+{
+let width = window.innerWidth;
+
+if(width > 1280)
+{
+ChangeScale("big");
+}
+else if(width <= 1280 && width > 720)
+{
+ChangeScale("normal");
+}
+else if(width < 720)
+{
+ChangeScale("small");
+}
+}
