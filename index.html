@@ -6,131 +6,113 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="img/creep/creep0.png">
     <meta name="description" content="Описание того почему же майнкрафт это моя жизнь">
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 </head>
 <body>
-
-    <header class="header" >
-        <nav class="nav">
-            <div class="nav__heading">
-                <h1 class="nav__title">Почему Майнкрафт это моя жизнь.</h1>
-                <a href="https://www.minecraft.net/ru-ru" target="_blank"><img class="nav__logo" src="img/logo.jpg" alt="Тут должно быть лого сорь :("></a>
-            </div>
-            <div class="nav__menu">
-                <a href="#mobs">Мобы</a>
-                <a href="#update">Обновления</a>
-                <a href="#opportunities">Возможности</a>
-                <a href="#community">Комьюнити</a>
-            </div>
+    <header class="header" id="top">
+        <nav>
+            <h1>Почему Майнкрафт это моя жизнь.</h1>
+            <a href="https://www.minecraft.net/ru-ru" target="_blank"><img class="logo" src="img/logo.jpg" alt="Тут должно быть лого сорь :("></a>
+            <br>
         </nav>
+        <div class="nav_menu">
+            <a href="#mobs">Мобы</a>
+            <a href="#update">Обновления</a>
+            <a href="#opportunities">Возможности</a>
+            <a href="#community">Комьюнити</a>
+        </div>
     </header>
-
-    <div class="column">
-        <div class="column__box">
-            <h2 class="column__title">Аксолотль</h2>
-            <a href="https://minecraft.fandom.com/ru/wiki/Аксолотль" target="_blank"><img src="img/axol_swim.gif" class="column__img" alt="Тут должен быть флексящий аксолотль"></a>
-            <p class="column__text">Добавлены недавно, но уже смогли полюбиться майнкрафтерам. Аксолотли могут помогать игрокам исследовать подводные данжи, так как нападают на враждебных мобов и снимают с игроков усталость. Получив урон, прикидываются мёртвыми и восстанавливают свои жизни. </p>
-        </div>
-        <div class="column__box">
-            <h2 class="column__title">Пчела</h2>
-            <a href="https://minecraft.fandom.com/ru/wiki/Пчела" target="_blank"><img src="img/bee.gif" class="column__img" alt="А тут должна быть пчола"></a>
-            <p class="column__text">Вторые насекомые были добавлены в обновлении 1.15. Моджанг выбрали их, чтобы обратить внимание на экологические проблемы. Благодаря пчёлам появился новый блок, который может использоваться в механимах, а также свечи. А ещё они милашки. <a href="https://youtu.be/lc2Ln_XLKbA" target="_blank">Пчела упала</a></p>
-        </div>
-        <div class="column__box">
-            <h2 class="column__title">Светящийся спрут</h2>
-            <a href="https://minecraft.fandom.com/ru/wiki/Светящийся_спрут" target="_blank"><img class="column__img" src="img/glow_s.gif" alt="Кто украл спрута" ></a>
-            <p class="column__text">Этого моба выбрали сами игроки. Светящиеся спруты дропают светящиеся чернила, с помощью которых можно красить таблички и рамка, текст или предметы на которых становятся более контрастными и выделяющимися, что полезно для разработчиков карт.</p>  
-        </div>
-    </div>
-        
-
-    <!-- <div class='slider'>
-        <div class='slider__box'>
-            <img class="slider__img slider__block" src="img/axol2.png" alt="Аксолотль первый" />
-            <img class="slider__img" src="img/axol3.jpg" alt="Аксолотль второй" />
-            <img class="slider__img" src="img/bee1.jpg" alt="Пчела первая" />
-            <img class="slider__img" src="img/bee2.png" alt="Пчела вторая" />
-            <img class="slider__img" src="img/glow_s1.jpg" alt="Спрут первый" />
-            <img class="slider__img" src="img/glow_s2.jpg" alt="Спрут второй" />
-        </div>
-        <a class="next" onclick="plusSlide()">&#10095;</a>
-    </div> -->
-
-    <div class="container">
-        <button class="slider__l-button">«</button>
-        <div class="slider">
-            <div class="slider__box">
-                <img src="./img/axol2.png" alt="">
-                <img src="./img/axol3.jpg" alt="">
-                <img src="./img/bee1.jpg" alt="">
-                <img src="./img/bee2.png" alt="">
-                <img src="./img/glow_s1.jpg" alt="">
-                <img src="./img/glow_s2.jpg" alt="">
+    <heading class="mobs" id="mobs">
+        <table width="100%">
+            <tr>
+             <td id="axolotl" >
+                <h2>Аксолотль</h2>
+                <a href="https://minecraft.fandom.com/ru/wiki/Аксолотль" target="_blank"><img src="img/axol_swim.gif" alt="Тут должен быть флексящий аксолотль" height="200"></a>
+                <p>Добавлены недавно, но уже смогли полюбиться майнкрафтерам. Аксолотли могут помогать игрокам исследовать подводные данжи, так как нападают на враждебных мобов и снимают с игроков усталость. Получив урон, прикидываются мёртвыми и восстанавливают свои жизни. </p>
+            </td>
+            <td id="bee">
+                <h2>Пчела</h2>
+                <a href="https://minecraft.fandom.com/ru/wiki/Пчела" target="_blank"><img src="img/bee.gif" alt="А тут должна быть пчола" height="200"></a>
+                <p>Вторые насекомые были добавлены в обновлении 1.15. Моджанг выбрали их, чтобы обратить внимание на экологические проблемы. Благодаря пчёлам появился новый блок, который может использоваться в механимах, а также свечи. А ещё они милашки. <a href="https://youtu.be/lc2Ln_XLKbA" target="_blank">Пчела упала</a></p>
+            </td>
+            <td id="glow_s">
+                <h2>Светящийся спрут</h2>
+                <a href="https://minecraft.fandom.com/ru/wiki/Светящийся_спрут" target="_blank"><img src="img/glow_s.gif" alt="Кто украл спрута" height="200"></a>
+                <p>Этого моба выбрали сами игроки. Светящиеся спруты дропают светящиеся чернила, с помощью которых можно красить таблички и рамка, текст или предметы на которых становятся более контрастными и выделяющимися, что полезно для разработчиков карт.</p>
+            </td>
+            </tr>
+           </table>
+        <div class='content'>
+            <a onselectstart="return false" onmousedown="return false" class='left_button'>&lt;</a>
+            <a onselectstart="return false" onmousedown="return false" class='right_button'>&gt;</a>
+            <div id='simple_slider'>
+                <img src="img/axol2.png" height=180px alt="Аксолотль первый" />
+                <img src="img/axol3.jpg" height=180px alt="Аксолотль второй" />
+                <img src="img/bee1.jpg" height=180px alt="Пчела первая" />
+                <img src="img/bee2.png" height=180px alt="Пчела вторая" />
+                <img src="img/glow_s1.jpg" height=180px alt="Спрут первый" />
+                <img src="img/glow_s2.jpg" height=180px alt="Спрут второй" />
             </div>
         </div>
-        <button class="slider__r-button">»</button>
-    </div>
-
-
-
-    <section class="section" id="update">
-        <h2 class="section__title">Поддержка и обновления.</h2>
-        <p class="section__text">Майнкрафту 17 мая 2021 года исполнилось 12 лет, но даже спустя столько времени игра продолжает развиваться и улучшаться. За это время выпущено более семнадцати глобальных обновлений.
-        </p>
-        <p class="section__text">Игра портирована на Linux, macOS, на Android, IOS, Windows Phone, PlayStation 4, Vita, VR, Xbox One, Nintendo 3DS, Switch и Wii U и продолжает разрабатываться для других платформ. </p>
-        <p class="section__text">Также существует специальное издание для образовательных учреждений, с помощью которого ученики могут изучать модели клеток, воссоздавать древнюю архитектуру, программировать и другое. Игра помогает усваивать материал, а также заинтересовывать детей.</p>
-        <div class="section__media">
-            <img class="section__img" src="img/minecraft_ed1.jpg" alt="едукетион едитион1" />
-            <img class="section__img" src="img/minecraft_ed2.png" alt="едукетион едитион2" />
-        </div>
-        <p class="section__text">Создатели очень кропотливо подходят к работе с майнкрафтом. Они множество раз изменяют текстуры блоков и сущностей, чтоб найти самые подходящие по стилю и понравившиеся игрокам варианты. Саунд-дизайнеры изучают звуки животных самолично, чтобы подобрать что-то максимально приближённое. </p>
-        <p class="section__text">Разработчики следят за тенденциями и просьбами игроков и изменяют или добавляют нужные для них вещи. Так в последнем обновлении был добавлен блок света, который очень полезен для людей, создающих карты. А также новое игровое правило, дающее возможность пропускать ночь, когда спят не 100% игроков, что полезно на серверах.</p>
-    </section>
-    <section class="section" id="opportunities">
-            <h2 class="section__title">Безграничные возможности.</h2>
-            <p class="section__text">Майнкрафт даёт возможность создавать огромные и сложные постройки, модификации и аддоны, карты на прохождения, текстурпаки и другие дополнения, изменяющие майнкрафт до неузнаваемости.</p>
-            <p class="section__text">Моды и аддоны - это дополнение к компьютерной игре, которые чаще всего созданы фанатами.
+    </heading>
+    <div class="update" id="update">
+            <h2>Поддержка и обновления.</h2>
+            <p>Майнкрафту 17 мая 2021 года исполнилось 12 лет, но даже спустя столько времени игра продолжает развиваться и улучшаться. За это время выпущено более семнадцати глобальных обновлений.
             </p>
-            <div class="section__media">
-                <iframe class="section__video" src="https://www.youtube.com/embed/jDIuWv7ROi8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <iframe class="section__video" src="https://www.youtube.com/embed/xMCk9V4k16M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p>Игра портирована на Linux, macOS, на Android, IOS, Windows Phone, PlayStation 4, Vita, VR, Xbox One, Nintendo 3DS, Switch и Wii U и продолжает разрабатываться для других платформ. </p>
+            <p>Также существует специальное издание для образовательных учреждений, с помощью которого ученики могут изучать модели клеток, воссоздавать древнюю архитектуру, программировать и другое. Игра помогает усваивать материал, а также заинтересовывать детей.</p>
+            <div class="media">
+                <img src="img/minecraft_ed1.jpg" height="230px" alt="едукетион едитион1" />
+                <img src="img/minecraft_ed2.png" height="230px" alt="едукетион едитион2" />
             </div>
-            <p class="section__text">Текстурпаки - это набор файлов, используемых для изменение игровых текстур блоков, предметов, мобов или интерфейса. А также для изменения или добавления анимаций.</p>
-            <div class="section__media">
-                <img class="section__img" src="img/opport1.png"> 
-                <img class="section__img" src="img/opport2.jpg"> 
-                <img class="section__img" src="img/opport3.jpg">
+            <p>Создатели очень кропотливо подходят к работе с майнкрафтом. Они множество раз изменяют текстуры блоков и сущностей, чтоб найти самые подходящие по стилю и понравившиеся игрокам варианты. Саунд-дизайнеры изучают звуки животных самолично, чтобы подобрать что-то максимально приближённое. </p>
+            <p>Разработчики следят за тенденциями и просьбами игроков и изменяют или добавляют нужные для них вещи. Так в последнем обновлении был добавлен блок света, который очень полезен для людей, создающих карты. А также новое игровое правило, дающее возможность пропускать ночь, когда спят не 100% игроков, что полезно на серверах.</p>
+        </div>
+    <section class="opportunities" id="opportunities">
+            <h2>Безграничные возможности.</h2>
+            <p>Майнкрафт даёт возможность создавать огромные и сложные постройки, модификации и аддоны, карты на прохождения, текстурпаки и другие дополнения, изменяющие майнкрафт до неузнаваемости.</p>
+            <p>Моды и аддоны - это дополнение к компьютерной игре, которые чаще всего созданы фанатами.
+            </p>
+            <div class="media">
+                <iframe width="420" height="236" src="https://www.youtube.com/embed/jDIuWv7ROi8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe width="420" height="236" src="https://www.youtube.com/embed/xMCk9V4k16M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <p>Текстурпаки - это набор файлов, используемых для изменение игровых текстур блоков, предметов, мобов или интерфейса. А также для изменения или добавления анимаций.</p>
+            <div class="media">
+                <img src="img/opport1.png" height="230px"> 
+                <img src="img/opport2.jpg" height="230px"> 
+                <img src="img/opport3.jpg" height="230px">
             </div>
     </section>
-    <section class="section" id="community">
-            <h2 class="section__title">Сплочённость сообщества.</h2>
-            <p class="section__text">Комьюнити майнкрафта очень разношёрстно, но при этом дружное. Я даже смогли собрать всего за пару дней людей, которые нарисовали криперов ниже! Сами игроки с помощью модификаций создают новые режимы игры, сервера, мини-игры, проводят фестивали и конкурсы.</p>
+    <section class="community" id="community">
+            <h2>Сплочённость сообщества.</h2>
+            <p>Комьюнити майнкрафта очень разношёрстно, но при этом дружное. Я даже смогли собрать всего за пару дней людей, которые нарисовали криперов ниже! Сами игроки с помощью модификаций создают новые режимы игры, сервера, мини-игры, проводят фестивали и конкурсы.</p>
             <h3>Майншилд</h3>
-            <p class="section__text">Самый популярный русский сервер майнкрафтеров, которые снимают видео это Майншилд. 9 июня серверу исполнилось два года, за это время игроки успели выложить 495 видео; построили как минимум пять небоскрёбов, огромную работающую газету, суд, железные дороги, особняки, магазины, кремль, японскую деревушку, огромные поля разных культур, другие фермы; провели множество ивентов и игр; объявили войну, а в самом конце сожгли главный предмет сервера: яйцо дракона.</p>
-            <p class="section__text">Недавно первый сезон закончился, но даже во время перезагрузки команда майншилда продолжает радовать активностями. Также они запустили дочерний сервер для подписчиков - Сабшилд и сервер для создателей видео поменьше - Майншилд Академия, на которых тоже происходят разные ивенты и активности.</p>
-            <div class="section__media">
-                <iframe class="section__video" src="https://www.youtube.com/embed/h_XjHQ7a5-E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <iframe class="section__video" src="https://www.youtube.com/embed/zs7a8TSJgXk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <iframe class="section__video" src="https://www.youtube.com/embed/OvsEYGaPaeA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p>Самый популярный русский сервер майнкрафтеров, которые снимают видео это Майншилд. 9 июня серверу исполнилось два года, за это время игроки успели выложить 495 видео; построили как минимум пять небоскрёбов, огромную работающую газету, суд, железные дороги, особняки, магазины, кремль, японскую деревушку, огромные поля разных культур, другие фермы; провели множество ивентов и игр; объявили войну, а в самом конце сожгли главный предмет сервера: яйцо дракона.</p>
+            <p>Недавно первый сезон закончился, но даже во время перезагрузки команда майншилда продолжает радовать активностями. Также они запустили дочерний сервер для подписчиков - Сабшилд и сервер для создателей видео поменьше - Майншилд Академия, на которых тоже происходят разные ивенты и активности.</p>
+            <div class="media">
+                <iframe width="420" height="236" src="https://www.youtube.com/embed/h_XjHQ7a5-E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe width="420" height="236" src="https://www.youtube.com/embed/zs7a8TSJgXk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe width="420" height="236" src="https://www.youtube.com/embed/OvsEYGaPaeA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
             <h3>2B2T</h3>
-            <p class="section__text">ТуБиТуТи это старейший анархо-сервер майнкрафта, которому в декабре исполнится 11 лет. За это время на нём произошли множество стычек и войн, кланы пытались захватить сервер, строили и разрушали величайшие постройки, проводили битвы и многое другое.</p>
-            <p class="section__text">Так как карта ТуБиТуТи не сбрасывалась ни разу со своего создания, сейчас она весит свыше 7500Гб памяти.</p>
-            <div class="section__media">
-                <iframe class="section__video" src="https://www.youtube.com/embed/ajiQkr6dp5U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <iframe class="section__video" src="https://www.youtube.com/embed/qEvCNWv_m_E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <iframe class="section__video" src="https://www.youtube.com/embed/J4XTKJeQJZU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p>ТуБиТуТи это старейший анархо-сервер майнкрафта, которому в декабре исполнится 11 лет. За это время на нём произошли множество стычек и войн, кланы пытались захватить сервер, строили и разрушали величайшие постройки, проводили битвы и многое другое.</p>
+            <p>Так как карта ТуБиТуТи не сбрасывалась ни разу со своего создания, сейчас она весит свыше 7500Гб памяти.</p>
+            <div class="media">
+                <iframe width="420" height="236" src="https://www.youtube.com/embed/ajiQkr6dp5U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe width="420" height="236" src="https://www.youtube.com/embed/qEvCNWv_m_E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe width="420" height="236" src="https://www.youtube.com/embed/J4XTKJeQJZU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
     </section>
-    <footer class="footer">
-        <img class="footer__img" src="img/creep/creeps.png"  alt="ДА ГДЕ?">
-        <div class="footer__link">
-        <p>Художники и художницы: <a href="https://vk.com/sov_daus" target="_blank">Двойкины</a>, <a href="https://twitter.com/tangerinedere" target="_blank">daemurr</a>, <a href="https://vk.com/zaetsbo" target="_blank">Бонифаций</a>, <a href="https://twitter.com/CookiesDinosaur" target="_blank">Кай</a>, <a href="https://twitter.com/CucumberWithTea" target="_blank">CucumberWithTea</a>, <a href="https://www.instagram.com/phantasma_who/" target="_blank">phantasma_who</a>, <a href="https://vk.com/qwertyqwertyq" target="_blank">qwerty</a>, <a href="https://vk.com/trrblskll" target="_blank">Макс и Эльза</a>, <a href="https://vk.com/hippie_alien_bean" target="_blank">BugWizard!</a> </p>
-        </div>
-        <div class="footer__copyright">© 2021 П.Д. @dvoykin, подписывайтесь на паблик вконтакте, аську, инстаграм и конечно же живой журнал.
-        </div>
+    <div class="creeps">
+        <img src="img/creep/creeps.png" width="100%"  alt="ДА ГДЕ?">
+        Художники и художницы: <a href="https://vk.com/sov_daus" target="_blank">Двойкины</a>, <a href="https://twitter.com/tangerinedere" target="_blank">daemurr</a>, <a href="https://vk.com/zaetsbo" target="_blank">Бонифаций</a>, <a href="https://twitter.com/CookiesDinosaur" target="_blank">Кай</a>, <a href="https://twitter.com/CucumberWithTea" target="_blank">CucumberWithTea</a>, <a href="https://www.instagram.com/phantasma_who/" target="_blank">phantasma_who</a>, <a href="https://vk.com/qwertyqwertyq" target="_blank">qwerty</a>, <a href="https://vk.com/trrblskll" target="_blank">Макс и Эльза</a>, <a href="https://vk.com/hippie_alien_bean" target="_blank">BugWizard!</a>
+    </div>
+    <footer>
+            <div class="copyright">© 2021 П.Д. @dvoykin, подписывайтесь на паблик вконтакте, аську, инстаграм и конечно же живой журнал.
+            </div>
     </footer>
-    <script src="script.js"></script>
-    <!-- <button class="button"><a href="#top" id="top_but">Наверх</a></button> -->
+    <a href="#top" id="top_but">Наверх</a>
+<script src="script.js"></script> 
 </body>
-
 </html>
