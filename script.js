@@ -36,5 +36,6 @@ ChangeScale("normal");
 else if(width < 720)
 {
 ChangeScale("small");
-}
-}
+}}
+
+

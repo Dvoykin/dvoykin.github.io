@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     font-family:Verdana, sans-serif;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -13,10 +14,6 @@ body {
     color: rgb(223, 223, 223);
     /* filter: blur(0.5px) contrast(200%) saturate(200%) */
 }
-
-/* img {
-    height: 100px;
-} */
 
 header {
     background: #fff url(img/nav.gif);
@@ -101,6 +98,8 @@ a {
 .container {
     background-color: rgb(115, 115, 115);
     display: flex;
+    padding-bottom: 20px;
+    margin: 0 auto;
 }
 
 .slider {
@@ -124,8 +123,11 @@ a {
 }
 
 .slider__r-button, .slider__l-button {
-    background-color: blanchedalmond;
-    font-size: 30px;
+    background-color: rgb(71, 71, 71);
+    font-size: 40px;
+    margin: auto;
+    padding: 10px;
+    user-select: none; 
 }
 
 .section {
@@ -133,14 +135,11 @@ a {
     padding: 15px 30px;
 }
 
-#opportunities {
+#opportunities, #shop {
     background-color: rgb(115, 115, 115);
-    transition: all ease 0.5s;
-
-
 }
 
-.section__title, .section h3 {
+.section__title, .section h3, .section h1 {
     margin: 15px;
     text-align: center;
 }
@@ -189,8 +188,12 @@ background-color: rgb(134, 134, 134);
 background-color: rgb(41, 41, 41);
 }
 
-/* #top_but  */
-    /* position:fixed;
+#links {
+    text-align: center;
+}
+
+#top_but {
+    position:fixed;
     bottom:70px;
     right:70px;
     font-weight:bold;
@@ -198,4 +201,4 @@ background-color: rgb(41, 41, 41);
     font-size: 1.5rem;
     padding: 5px 10px;
     background-color: rgb(27, 27, 27);
-} */ 
+} 
